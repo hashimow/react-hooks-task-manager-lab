@@ -67,10 +67,10 @@ describe("Task Manager App", () => {
     const button =  await findAllByTestId("1")
     global.setFetchResponse({ id: 1, title: "Buy groceries", completed: true })
     
-    
     await waitFor(() => {
-        fireEvent.click(button[0]);
-        expect(getByText("Undo")).toBeInTheDocument();
-    });
+    fireEvent.click(button[0]);
+    expect(getByText("Undo")).toBeInTheDocument();
+  
+  });
   });
 });
